@@ -1,6 +1,6 @@
 extends Node2D
 
-#comment to test git
+
 func _ready():
 	$LittleGuy/LittleGuyAnim.play("head_bob")
 	
