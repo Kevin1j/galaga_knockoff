@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://b1rirtd8jv6o5"]
 
-[ext_resource type="Script" uid="uid://ygu2eylixmvh" path="res://title_screen.gd" id="1_ak2if"]
-[ext_resource type="Script" uid="uid://b2atycxhwx8ki" path="res://button.gd" id="1_v6p8y"]
+[ext_resource type="Script" uid="uid://ygu2eylixmvh" path="res://scenes/title_screen.gd" id="1_ak2if"]
+[ext_resource type="Script" uid="uid://b2atycxhwx8ki" path="res://scenes/button.gd" id="1_v6p8y"]
 [ext_resource type="Texture2D" uid="uid://dslqy6rh50ot1" path="res://sprites/giraffe_guy_32/giraffe_guy_321.png" id="3_tpml5"]
 [ext_resource type="Texture2D" uid="uid://c5ls4kxnmi1fj" path="res://sprites/giraffe_guy_32/giraffe_guy_322.png" id="4_jqemp"]
 [ext_resource type="Texture2D" uid="uid://cxv2nqurgjhfd" path="res://sprites/giraffe_guy_32/giraffe_guy_323.png" id="5_013yr"]

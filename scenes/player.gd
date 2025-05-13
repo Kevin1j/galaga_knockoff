@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @onready var charAnim = $AnimatedSprite2D
 @export var speed = 1500
-var bullet = preload("res://bullet.tscn")
+var bullet = preload("res://scenes//bullet.tscn")
 @onready var bullet_spawn = $BulletSpawn
 var cooldown = false
 
