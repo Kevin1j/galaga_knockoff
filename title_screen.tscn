@@ -1,0 +1,121 @@
+[gd_scene load_steps=11 format=3 uid="uid://b1rirtd8jv6o5"]
+
+[ext_resource type="Script" uid="uid://ygu2eylixmvh" path="res://title_screen.gd" id="1_ak2if"]
+[ext_resource type="Script" uid="uid://b2atycxhwx8ki" path="res://button.gd" id="1_v6p8y"]
+[ext_resource type="Texture2D" uid="uid://dslqy6rh50ot1" path="res://sprites/giraffe_guy_32/giraffe_guy_321.png" id="3_tpml5"]
+[ext_resource type="Texture2D" uid="uid://c5ls4kxnmi1fj" path="res://sprites/giraffe_guy_32/giraffe_guy_322.png" id="4_jqemp"]
+[ext_resource type="Texture2D" uid="uid://cxv2nqurgjhfd" path="res://sprites/giraffe_guy_32/giraffe_guy_323.png" id="5_013yr"]
+[ext_resource type="Texture2D" uid="uid://cnmmd0e26y5sb" path="res://sprites/giraffe_guy_32/giraffe_guy_324.png" id="6_8vmu4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ak2if"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ig5kc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05l2w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xfn3p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tpml5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jqemp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_013yr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8vmu4")
+}],
+"loop": true,
+"name": &"head_bob",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(53, 41)
+script = ExtResource("1_ak2if")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 409.0
+offset_top = 537.0
+offset_right = 1344.0
+offset_bottom = 638.0
+text = "Start Game!"
+script = ExtResource("1_v6p8y")
+
+[node name="PreviousScore" type="Label" parent="."]
+offset_left = 412.0
+offset_top = 647.0
+offset_right = 505.0
+offset_bottom = 680.0
+text = "Score = 0"
+
+[node name="AchievementOrganizer" type="VBoxContainer" parent="."]
+offset_left = -14.0
+offset_top = 232.0
+offset_right = 318.0
+offset_bottom = 660.0
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="AchievementLabel" type="Label" parent="AchievementOrganizer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Achievments"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel25" type="Panel" parent="AchievementOrganizer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ak2if")
+
+[node name="Kill25Enemies" type="Label" parent="AchievementOrganizer/Panel25"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+offset_right = 332.0
+offset_bottom = 100.0
+text = "Kill 25 Little Guys"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel50" type="Panel" parent="AchievementOrganizer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ig5kc")
+
+[node name="Kill50Enemies" type="Label" parent="AchievementOrganizer/Panel50"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+offset_right = 332.0
+offset_bottom = 100.0
+text = "Kill 50 Little Guys"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel100" type="Panel" parent="AchievementOrganizer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_05l2w")
+
+[node name="Kill100Enemies" type="Label" parent="AchievementOrganizer/Panel100"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+offset_right = 332.0
+offset_bottom = 100.0
+text = "Kill 100 Little Guys"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LittleGuy" type="Node2D" parent="."]
+
+[node name="LittleGuyAnim" type="AnimatedSprite2D" parent="LittleGuy"]
+position = Vector2(903, 270)
+scale = Vector2(17.813, 17.813)
+sprite_frames = SubResource("SpriteFrames_xfn3p")
+animation = &"head_bob"
+speed_scale = 0.8
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

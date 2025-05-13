@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://r00nv6i437u2"]
+
+[ext_resource type="Texture2D" uid="uid://dyinu6hwnd7j1" path="res://sprites/giraffe_guy (2).png" id="1_gl40x"]
+
+[node name="Enemy1" type="RigidBody2D" groups=["enemies"]]
+collision_layer = 18
+collision_mask = 17
+mass = 0.306
+gravity_scale = 0.279
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(17, -81, 9, -72, 9, -27, -18, 22, -88, 25, -120, 50, -120, 86, -88, 128, -53, 120, 1, 129, 17, 120, 16, 79, 34, 63, 25, 20, 43, -14, 79, -15, 89, -25, 88, -48, 34, -79)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gl40x")

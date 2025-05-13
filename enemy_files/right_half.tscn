@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuwd0sj6171op"]
+
+[ext_resource type="Script" uid="uid://dwkfh5757qukw" path="res://enemy_files/right_half.gd" id="1_vfaol"]
+[ext_resource type="Texture2D" uid="uid://dv5wumiq7dprn" path="res://sprites/giraffe_guy_right_half.png" id="1_x1mx3"]
+
+[node name="right_half" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_vfaol")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_x1mx3")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-17, 128, -18, 21, 8, -32, 8, -72, 17, -82, 31, -79, 63, -63, 88, -48, 88, -27, 78, -14, 38, -9, 25, 21, 32, 42, 34, 62, 11, 84, 17, 118, -1, 129)
