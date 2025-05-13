@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://demonyv3dqi3a"]
+[gd_scene load_steps=9 format=3 uid="uid://demonyv3dqi3a"]
 
 [ext_resource type="Script" uid="uid://ddkuhfl3qlude" path="res://scenes/player.gd" id="1_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://vdbh1xxqhf1x" path="res://sprites/spaceship/spaceship1.png" id="2_1jxqw"]
+[ext_resource type="PackedScene" uid="uid://biur4vc7btgm4" path="res://scenes/bullet.tscn" id="2_fjrip"]
 [ext_resource type="Texture2D" uid="uid://dg46bl3pwmdq" path="res://sprites/spaceship/spaceship2.png" id="3_dw050"]
 [ext_resource type="Texture2D" uid="uid://6il14auekfkc" path="res://sprites/spaceship/spaceship3.png" id="4_b26j0"]
 [ext_resource type="Texture2D" uid="uid://cosyadpgc6m0l" path="res://sprites/spaceship/spaceship4.png" id="5_n7ghd"]
@@ -33,6 +34,7 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_2hs0m")
+bullet_scene = ExtResource("2_fjrip")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(11.776, 11.776)

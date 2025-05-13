@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @onready var charAnim = $AnimatedSprite2D
 @export var speed = 1500
-var bullet = preload("res://scenes//bullet.tscn")
+@export var bullet_scene: PackedScene
 @onready var bullet_spawn = $BulletSpawn
 var cooldown = false
 
@@ -28,7 +28,7 @@ func _physics_process(delta):
 		
 
 func fire_bullet():
-	var bul = bullet.instantiate()
+	var bul = bullet_scene.instantiate()
 	bul.global_position = bullet_spawn.global_position
 	get_tree().root.add_child(bul)
 	

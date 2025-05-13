@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://biur4vc7btgm4"]
+[gd_scene load_steps=6 format=3 uid="uid://biur4vc7btgm4"]
 
 [ext_resource type="Texture2D" uid="uid://ocu0txx8u2xt" path="res://sprites/bullet.png" id="1_v7oki"]
 [ext_resource type="Script" uid="uid://doh5i0kpky06v" path="res://scenes/bullet.gd" id="1_v8qja"]
+[ext_resource type="PackedScene" uid="uid://cmd5iuy6u0pux" path="res://enemy_files/left_half.tscn" id="2_eoqba"]
+[ext_resource type="PackedScene" uid="uid://cuwd0sj6171op" path="res://enemy_files/right_half.tscn" id="3_qncy5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8qja"]
 size = Vector2(8, 6)
@@ -11,6 +13,8 @@ scale = Vector2(4.136, 4.136)
 collision_layer = 8
 collision_mask = 2
 script = ExtResource("1_v8qja")
+left_half = ExtResource("2_eoqba")
+right_half = ExtResource("3_qncy5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_v7oki")

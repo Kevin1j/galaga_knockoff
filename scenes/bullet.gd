@@ -2,8 +2,8 @@ extends Area2D
 
 
 @export var speed = 1800
-var left_half = preload("res://enemy_files//left_half.tscn")
-var right_half = preload("res://enemy_files//right_half.tscn")
+@export var left_half: PackedScene
+@export var right_half: PackedScene
 
 
 func _physics_process(delta: float) -> void:
