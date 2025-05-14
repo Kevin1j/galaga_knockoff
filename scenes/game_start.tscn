@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://ocfpekaw61io"]
+[gd_scene load_steps=10 format=3 uid="uid://ocfpekaw61io"]
 
 [ext_resource type="Script" uid="uid://chpahphd0kv4w" path="res://scenes/game_start.gd" id="1_5eddm"]
 [ext_resource type="PackedScene" uid="uid://demonyv3dqi3a" path="res://scenes/player.tscn" id="2_dpf5s"]
+[ext_resource type="PackedScene" uid="uid://r00nv6i437u2" path="res://enemy_files/enemy1.tscn" id="2_kdykw"]
+[ext_resource type="PackedScene" uid="uid://b1rirtd8jv6o5" path="res://scenes/title_screen.tscn" id="3_eblkc"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_dpf5s"]
 a = Vector2(0, 994)
@@ -25,6 +27,8 @@ script/source = "extends CanvasLayer
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_5eddm")
+enemy_scene = ExtResource("2_kdykw")
+title_screen = ExtResource("3_eblkc")
 
 [node name="Player" parent="." instance=ExtResource("2_dpf5s")]
 position = Vector2(764, 740)

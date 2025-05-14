@@ -1,7 +1,8 @@
 extends Node2D
 
 
-var enemy_scene = preload("res://enemy_files//enemy1.tscn")
+@export var enemy_scene: PackedScene
+@export var title_screen: PackedScene
 @onready var game_time = 0
 @onready var score_label = $score_counter/Control/Label
 
@@ -30,4 +31,4 @@ func _on_enemy_timer_timeout() -> void:
 
 
 func _on_game_over_box_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://scenes//title_screen.tscn")
+	get_tree().change_scene_to_packed(title_screen)

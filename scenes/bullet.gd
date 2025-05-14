@@ -24,7 +24,7 @@ func _on_body_entered(body: Node2D) -> void:
 			Global.achievements["kill_50"] = true
 		if Global.score >= 100:
 			Global.achievements["kill_100"] = true
-		queue_free()
+		
 
 
 func split_enemy(enemy, momentum):
@@ -37,5 +37,5 @@ func split_enemy(enemy, momentum):
 	right.velocity = momentum + Vector2(300, -100)
 	get_tree().current_scene.add_child(left)
 	get_tree().current_scene.add_child(right)
-	enemy.queue_free()
-	
+	call_deferred("queue_free")
+	enemy.call_deferred("queue_free")
