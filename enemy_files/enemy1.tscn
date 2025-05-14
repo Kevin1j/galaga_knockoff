@@ -13,4 +13,5 @@ visible = false
 polygon = PackedVector2Array(17, -81, 9, -72, 9, -27, -18, 22, -88, 25, -120, 50, -120, 86, -88, 128, -53, 120, 1, 129, 17, 120, 16, 79, 34, 63, 25, 20, 43, -14, 79, -15, 89, -25, 88, -48, 34, -79)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.795, 0.795)
 texture = ExtResource("1_gl40x")

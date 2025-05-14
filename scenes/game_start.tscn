@@ -32,7 +32,7 @@ title_screen = ExtResource("3_eblkc")
 
 [node name="Player" parent="." instance=ExtResource("2_dpf5s")]
 position = Vector2(764, 740)
-scale = Vector2(0.523, 0.523)
+scale = Vector2(0.445, 0.445)
 collision_mask = 5
 
 [node name="EnemyTimer" type="Timer" parent="."]
