@@ -31,5 +31,5 @@ func _on_enemy_timer_timeout() -> void:
 
 
 func _on_game_over_box_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_packed(title_screen)
+	Global.to_title()
 	
