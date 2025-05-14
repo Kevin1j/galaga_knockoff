@@ -30,7 +30,7 @@ func _physics_process(delta):
 func fire_bullet():
 	var bul = bullet_scene.instantiate()
 	bul.global_position = bullet_spawn.global_position
-	get_tree().root.add_child(bul)
+	get_tree().root.call_deferred("add_child", bul)
 	
 	
 	

@@ -22,7 +22,7 @@ func spawn_enemy():
 	var x = randi_range(100,1400)
 	var y = randi_range(-900, -1100)
 	enemy.position = Vector2(x,y)
-	add_child(enemy)
+	call_deferred("add_child",enemy)
 	
 
 
@@ -32,3 +32,4 @@ func _on_enemy_timer_timeout() -> void:
 
 func _on_game_over_box_body_entered(body: Node2D) -> void:
 	get_tree().change_scene_to_packed(title_screen)
+	
